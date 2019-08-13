@@ -1,20 +1,36 @@
 //==========================
-//Variables Globales
+// Variables Globales
 //==========================
 
 //==========================
-//Puerto
+// Puerto
 //==========================
 process.env.PORT = process.env.PORT || 3000;
 
 //==========================
-//Entorno
+// Entorno
 //==========================
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 //==========================
-//Base de datos
+// Tiempo Caducidad Token
+//==========================
+// 60 Segundos
+// 60 Minutos
+// 24 Horas
+// 30 Dias
+
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24;
+
+//==========================
+// SEED Token
+//==========================
+
+process.env.SEED_TOKEN = process.env.SEED_TOKEN || 'secret_desarrollo';
+
+//==========================
+// Base de datos
 //==========================
 
 let urlBD;
