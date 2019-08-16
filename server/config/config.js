@@ -41,3 +41,9 @@ if (process.env.NODE_ENV == 'dev') {
 }
 
 process.env.URLDB = urlBD;
+
+//==========================
+// ClientId Google SignIn
+//==========================
+
+process.env.CLIENT_ID = process.env.CLIENT_ID || '952094073007-34g5u15i2qostdmb83noccug8qdbsji0.apps.googleusercontent.com';
