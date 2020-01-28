@@ -1,8 +1,8 @@
 const express = require('express');
 const bcript = require('bcrypt');
 const _ = require('underscore');
-const app = express();
 const Usuario = require('../models/usuario');
+const app = express();
 
 const { verificarToken, verificar_Admin_Role } = require('../middlewares/autenticacion');
 
@@ -90,15 +90,15 @@ app.delete('/usuario/:id', [verificarToken, verificar_Admin_Role], (req, res) =>
         if (err) {
             return res.status(400).json({
                 ok: false,
-                error
+                error: err
             });
         }
 
         if (!usuarioEliminado) {
             return res.status(400).json({
                 ok: false,
-                err: {
-                    message: 'El usuario no existe'
+                error: {
+                    mensaje: 'El usuario no existe'
                 }
             });
         }

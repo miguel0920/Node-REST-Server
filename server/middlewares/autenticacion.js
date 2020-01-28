@@ -13,7 +13,7 @@ let verificarToken = (req, res, next) => {
             return res.status(401).json({
                 ok: false,
                 error: {
-                    message: 'Token Invalid'
+                    message: 'Token Invalido'
                 }
             });
         }
